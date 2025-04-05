@@ -1,3 +1,9 @@
+window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('loader').style.display = 'none';
+    }, 2000); // يمكنك تغيير المدة حسب احتياجك
+  });
+
 function openVideo() {
     document.getElementById("videoModal").style.display = "block";
   }

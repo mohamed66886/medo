@@ -16,7 +16,8 @@ html, body {
     background-position: center;
     background-attachment: fixed;
     color: #ffffff;
-    animation: bac 10s infinite;
+background-image: url(/img/480940979_1712482556311964_863284638303651555_n.jpg);
+
   }
   body::after {
     content: "";
@@ -30,14 +31,15 @@ html, body {
   }
 
   header {
-    background-color: #0077cc;
-    color: white;
+    background-color: #ffffff;
+    color: #0277cc;
     padding: 20px;
     text-align: center;
     box-shadow: #FFF -1px 1px 20px 0px;
   }
   header h2 {
     margin: 0;
+    font-size: 18px;
   }
 
   .container {
@@ -129,9 +131,62 @@ html, body {
     cursor: pointer;
     border-radius: 5px;
   }
-
-  footer {
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #0077cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+  }
+  
+  .heart {
+    width: 100px;
+    height: 90px;
+    animation: heartbeat 1.5s infinite;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50px 50px 0 0;
+  }
+  
+  .heart:before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  .loading-text {
+    color: white;
+    text-align: center;
+    margin-top: 120px;
+    font-size: 20px;
+  }
+  
+  @keyframes heartbeat {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(0.8); }
+  }
+  footer {
     color: white;
     padding: 10px;
     text-align: center;
@@ -152,23 +207,7 @@ html, body {
       transform: scale(1);
     }
   }
-  @keyframes bac {
-    0% {
-      background-image: url(/img/461285632_953938460112926_2029159173132653833_n.jpg);
-    }
-    25% {
-     background-image: url(/img/468564322_1127398552728778_501800039026866756_n.jpg);
-    }
-    50% {
-      background-image: url(/img/480940979_1712482556311964_863284638303651555_n.jpg);
-    }
-    75% {
-      background-image: url(/img/WhatsApp\ Image\ 2025-03-20\ at\ 05.46.02.jpeg);
-    }
-    100% {
-      background-image: url(/img/WhatsApp\ Image\ 2025-03-20\ at\ 05.49.21.jpeg);
-    }
-  }
+  
 
   @media (max-width: 600px) {
     h1 {
