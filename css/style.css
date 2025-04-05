@@ -33,7 +33,7 @@ background-image: url(/img/480940979_1712482556311964_863284638303651555_n.jpg);
   header {
     background-color: #ffffff;
     color: #0277cc;
-    padding: 20px;
+    padding: 11px;
     text-align: center;
     box-shadow: #FFF -1px 1px 20px 0px;
   }
@@ -90,7 +90,7 @@ background-image: url(/img/480940979_1712482556311964_863284638303651555_n.jpg);
     background-color: #005fa3;
   }
 
-  /* Video Modal */
+
   .video-modal {
     display: none;
     position: fixed;
