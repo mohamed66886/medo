@@ -1,0 +1,182 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    animation: bac 10s infinite;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 41, 167, 0.574);
+    z-index: -1;
+  }
+
+  header {
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: #FFF -1px 1px 20px 0px;
+  }
+  header h2 {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  .container button {
+    background-color: #ffffff;
+    color: #0277cc;
+    padding: 12px 25px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    width: fit-content;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: #FFF -1px 1px 20px 0px;
+    animation: chose 1s infinite;
+  }
+  .btn {
+    background-color: #0077cc;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #005fa3;
+  }
+
+  /* Video Modal */
+  .video-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  .video-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 35px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .video-content video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-color: #005fa3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  footer {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes chose {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes bac {
+    0% {
+      background-image: url(/img/461285632_953938460112926_2029159173132653833_n.jpg);
+    }
+    25% {
+     background-image: url(/img/468564322_1127398552728778_501800039026866756_n.jpg);
+    }
+    50% {
+      background-image: url(/img/480940979_1712482556311964_863284638303651555_n.jpg);
+    }
+    75% {
+      background-image: url(/img/WhatsApp\ Image\ 2025-03-20\ at\ 05.46.02.jpeg);
+    }
+    100% {
+      background-image: url(/img/WhatsApp\ Image\ 2025-03-20\ at\ 05.49.21.jpeg);
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+    }
+  }
